@@ -1,63 +1,51 @@
 export interface Property {
   id: number;
   title: string;
-  price: number;
-  location: string;
-  bedrooms: number;
-  bathrooms: number;
-  area: number;
   type: string;
+  location: string;
+  price: number; 
+  bedrooms: number;
+  bathrooms: number; 
   image: string;
   description: string;
+  status: string; 
 }
 
 export const properties: Property[] = [
   {
     id: 1,
-    title: "Rumah Minimalis Modern BSD",
-    price: 850000000,
-    location: "Tangerang Selatan",
-    bedrooms: 3,
-    bathrooms: 2,
-    area: 120,
-    type: "Minimalis",
-    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&q=80&w=800",
-    description: "Rumah siap huni dengan desain minimalis di lokasi strategis BSD City."
+    title: "Rumah Kontrakan Minimalis Beji",
+    type: "Rumah",
+    location: "Beji, Depok",
+    price: 2500000,
+    bedrooms: 2,
+    bathrooms: 1,
+    image: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?q=80&w=800&auto=format&fit=crop",
+    description: "Rumah kontrakan minimalis nyaman di area Beji. Cocok untuk keluarga kecil atau mahasiswa.",
+    status: "Disewa",
   },
   {
     id: 2,
-    title: "Apartemen Mewah Sudirman",
-    price: 2500000000,
-    location: "Jakarta Pusat",
-    bedrooms: 2,
-    bathrooms: 2,
-    area: 90,
+    title: "Studio Apartment Margonda Residence",
     type: "Apartemen",
-    image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&q=80&w=800",
-    description: "Hunian vertikal eksklusif dengan view kota Jakarta."
+    location: "Margonda, Depok",
+    price: 3800000,
+    bedrooms: 1,
+    bathrooms: 1,
+    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&auto=format&fit=crop",
+    description: "Apartemen studio full furnished di lokasi strategis Margonda. Akses mudah ke kampus dan stasiun.",
+    status: "Tersedia",
   },
   {
     id: 3,
-    title: "Villa Cantik Canggu",
-    price: 4200000000,
-    location: "Badung, Bali",
-    bedrooms: 4,
-    bathrooms: 4,
-    area: 300,
-    type: "Villa",
-    image: "https://images.unsplash.com/photo-1576941089067-2de3c901e126?auto=format&fit=crop&q=80&w=800",
-    description: "Investasi properti terbaik di Bali dengan tingkat okupansi tinggi."
+    title: "Kost Eksklusif Kukusan (Kutek)",
+    type: "Kost",
+    location: "Kukusan, Depok",
+    price: 1500000,
+    bedrooms: 1,
+    bathrooms: 1,
+    image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=800&auto=format&fit=crop",
+    description: "Kost eksklusif kamar mandi dalam dekat pintu belakang UI Kutek. Fasilitas lengkap dan bersih.",
+    status: "Sisa 1 Kamar",
   },
-  {
-    id: 4,
-    title: "Modern Tropical House",
-    price: 1200000000,
-    location: "Bandung, Jawa Barat",
-    bedrooms: 3,
-    bathrooms: 3,
-    area: 150,
-    type: "Modern",
-    image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233?auto=format&fit=crop&q=80&w=800",
-    description: "Rumah konsep tropis dengan sirkulasi udara yang sangat baik."
-  }
 ];

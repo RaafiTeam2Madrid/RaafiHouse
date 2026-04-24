@@ -1,25 +1,21 @@
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-interface FavoriteState {
+interface FavoriteStore {
   favorites: number[];
   toggleFavorite: (id: number) => void;
 }
 
-// Perhatikan kata 'export' di bawah ini, jangan sampai ketinggalan!
-export const useFavoriteStore = create<FavoriteState>()(
+export const useFavoriteStore = create<FavoriteStore>()(
   persist(
     (set) => ({
       favorites: [],
-      toggleFavorite: (id) =>
-        set((state) => ({
-          favorites: state.favorites.includes(id)
-            ? state.favorites.filter((favId) => favId !== id)
-            : [...state.favorites, id],
-        })),
+      toggleFavorite: (id) => set((state) => ({
+        favorites: state.favorites.includes(id)
+          ? state.favorites.filter((favId) => favId !== id)
+          : [...state.favorites, id],
+      })),
     }),
-    { 
-      name: 'property-storage',
-    }
+    { name: 'property-favorites' }
   )
 );
