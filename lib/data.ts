@@ -3,49 +3,43 @@ export interface Property {
   title: string;
   type: string;
   location: string;
-  price: number; 
+  price: number;
   bedrooms: number;
-  bathrooms: number; 
-  image: string;
+  bathrooms: number;
+  image: string; // Cover utama
+  gallery: string[]; // Foto-foto detail
   description: string;
-  status: string; 
+  status: string;
 }
 
 export const properties: Property[] = [
   {
     id: 1,
-    title: "Rumah Kontrakan Minimalis Beji",
+    title: "Cagar House", // Sesuaikan judulnya
     type: "Rumah",
-    location: "Beji, Depok",
-    price: 2500000,
-    bedrooms: 2,
-    bathrooms: 1,
-    image: "https://images.unsplash.com/photo-1583608205776-bfd35f0d9f83?q=80&w=800&auto=format&fit=crop",
-    description: "Rumah kontrakan minimalis nyaman di area Beji. Cocok untuk keluarga kecil atau mahasiswa.",
-    status: "Disewa",
-  },
-  {
-    id: 2,
-    title: "Studio Apartment Margonda Residence",
-    type: "Apartemen",
-    location: "Margonda, Depok",
-    price: 3800000,
-    bedrooms: 1,
-    bathrooms: 1,
-    image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=800&auto=format&fit=crop",
-    description: "Apartemen studio full furnished di lokasi strategis Margonda. Akses mudah ke kampus dan stasiun.",
+    location: "Cagar, Jakarta Selatan",
+    price: 4000000, // Harga sewa per bulan (sesuaikan)
+    bedrooms: 3,
+    bathrooms: 2,
+    // Gunakan "tampak depan" sebagai cover utama
+    image: "/tampak depan.png.jpeg",
+    // Masukkan SEMUA foto dari folder public ke dalam array gallery
+    gallery: [
+      "/tampak depan.png.jpeg",
+      "/halaman.png.jpeg",
+      "/pintu masuk.png.jpeg",
+      "/lantai 2.png.jpeg",
+      "/dapur.png.jpeg",
+      "/kamar 2 depan.png.jpeg",
+      "/kamar 2.kanan.png.jpeg",
+      "/kamar lat 2 kiri.png.jpeg",
+      "/kamar lat 3.jpeg",
+      "/balkon lat 2.png.jpeg",
+      "/jemuran.png.jpeg",
+      "/tampak belakang.png.jpeg",
+    ],
+    description:
+      " RaafiHouse di Jalan Cagar, Cipedak, hanya 20 menit dari UI Depok & 10 menit dari Tol Brigif. Dekat RS & Polsek, akses super cepat. Temukan kost & apartemen idaman sekarang! Rumah sewa 3 lantai yang sangat luas dan nyaman. Memiliki banyak kamar, dapur yang bersih, balkon di lantai atas untuk bersantai, serta area jemuran khusus. Sangat cocok untuk  dijadikan kost/kontrakan patungan mahasiswa dan pekerja.",
     status: "Tersedia",
-  },
-  {
-    id: 3,
-    title: "Kost Eksklusif Kukusan (Kutek)",
-    type: "Kost",
-    location: "Kukusan, Depok",
-    price: 1500000,
-    bedrooms: 1,
-    bathrooms: 1,
-    image: "https://images.unsplash.com/photo-1598928506311-c55ded91a20c?q=80&w=800&auto=format&fit=crop",
-    description: "Kost eksklusif kamar mandi dalam dekat pintu belakang UI Kutek. Fasilitas lengkap dan bersih.",
-    status: "Sisa 1 Kamar",
   },
 ];
